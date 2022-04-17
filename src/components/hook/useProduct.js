@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 const useProduct = () => {
-    const [product, setProduct] = useState();
+    const [products, setProduct] = useState([]);
 
     useEffect( () => {
         fetch('courseData.json')
@@ -10,9 +10,7 @@ const useProduct = () => {
         .then(data => setProduct(data))
     }, []);
 
-    console.log(product);
-
-    return [product, setProduct];
+    return [products, setProduct];
 }
 
 export default useProduct;

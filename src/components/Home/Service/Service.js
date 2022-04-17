@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useProduct from '../../hook/useProduct';
 import SingleProduct from './SingleProduct/SingleProduct';
 
 
 const Service = () => {
-    const [products, setProduct] = useState([]);
-
-    useEffect( () => {
-        fetch('courseData.json')
-        .then(res => res.json())
-        .then(data => setProduct(data))
-    }, []);
+    const [products, setProduct] = useProduct();
 
     return (
         <div id='service' className='container'>

@@ -17,7 +17,7 @@ const Footer = () => {
                     <p className='text-white'>Helpline : 017XXXXXXXX, 018XXXXXXXX , 019XXXXXXXX</p>
                     <p className='text-white'>(Available : Sat - Thu, 10:00 AM to 7:00 PM)</p>
                 </div>
-                <div className="col-3">
+                <div className="col-3 pt-4">
                     <ListGroup> 
                         <ListGroup.Item>About</ListGroup.Item>
                         <ListGroup.Item>Blogs</ListGroup.Item>

@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "python programming",
-        "description": "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small- and large-scale projects.",
+        "description": "Python is a high-level, general-purpose programming language. Its design code readability with the use of significant indentation. Its language constructs and object-oriented approach aim to help, logical code for projects.",
         "img": "https://i.ibb.co/gvbSnvV/Python-Programming.jpg",
         "price": 2999
     },
@@ -16,7 +16,7 @@
     {
         "id": 3,
         "title": "JavaScript programming",
-        "description": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries.",
+        "description": "JavaScript is a programming language that is one of the core technologies of the WWW, alongside. Over 97% of websites use js on the client side for web page behavior, often incorporating third-party libraries.",
         "img": "https://i.ibb.co/JcdYcwT/javascript.jpg",
         "price": 3499
     },
@@ -37,7 +37,7 @@
     {
         "id": 6,
         "title": "Full stack e-commerce",
-        "description": "A Full Stack Developer is someone who works with the Back End — or server side — of the application as well as the Front End, or client side. It have to have some skills in a wide variety of coding niches, from databases to graphic design and UI/UX management in order to do their job well.",
+        "description": "A Full Stack Developer is someone who works with the Back End of the application as well as the Front End, or client side. It some skills in a wide variety of coding niches, from databases to graphic design and UI/UX management in order.",
         "img": "https://i.ibb.co/hK5SwTW/django-commerce.png",
         "price": 9999
     }
