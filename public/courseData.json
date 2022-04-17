@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "python programming",
+        "description": "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small- and large-scale projects.",
+        "img": "https://i.ibb.co/gvbSnvV/Python-Programming.jpg",
+        "price": 2999
+    },
+    {
+        "id": 2,
+        "title": "Laravel programming",
+        "description": "Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.",
+        "img": "https://i.ibb.co/ssT0M8C/laravel.jpg",
+        "price": 4999
+    },
+    {
+        "id": 3,
+        "title": "JavaScript programming",
+        "description": "JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries.",
+        "img": "https://i.ibb.co/JcdYcwT/javascript.jpg",
+        "price": 3499
+    },
+    {
+        "id": 4,
+        "title": "Java programming",
+        "description": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. Get enrolled from us and learn it quickly with our special services and cares.",
+        "img": "https://i.ibb.co/1LrYfN8/java.jpg",
+        "price": 6999
+    },
+    {
+        "id": 5,
+        "title": "c plus plus programming",
+        "description": "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'. Get enrolled from us and learn it quickly with our special services and cares.",
+        "img": "https://i.ibb.co/cD2gRm3/c.jpg",
+        "price": 1999
+    },
+    {
+        "id": 6,
+        "title": "Full stack e-commerce",
+        "description": "A Full Stack Developer is someone who works with the Back End — or server side — of the application as well as the Front End, or client side. It have to have some skills in a wide variety of coding niches, from databases to graphic design and UI/UX management in order to do their job well.",
+        "img": "https://i.ibb.co/hK5SwTW/django-commerce.png",
+        "price": 9999
+    }
+]
