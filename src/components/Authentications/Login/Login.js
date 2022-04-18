@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../../images/google-logo.png';
 import github from '../../../images/github-logo.png';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../../../firebase.init';
+import '../Register/Register.css';
 
 const Login = () => {
     const [userInfo, setUserInfo] = useState({
@@ -17,7 +18,6 @@ const Login = () => {
         password: "",
     })
     
-    const [error, setError] = useState('');
     const [ signInWithEmailAndPassword, user, loading, hookError ] = useSignInWithEmailAndPassword(auth);
 
 
@@ -40,6 +40,16 @@ const Login = () => {
             setErrors({...errors, password:'Password must be at least 8 character'});
         }
     };
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    useEffect( () => {
+        if (user) {
+            navigate(from);
+        }
+    }, [user])
 
 
     return (
