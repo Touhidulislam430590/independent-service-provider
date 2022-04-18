@@ -7,7 +7,7 @@ const Service = () => {
     const [products, setProduct] = useProduct();
 
     return (
-        <div id='service' className='container'>
+        <div id="services" className='container'>
             <h2 className="text-center mt-3 mb-5">Services</h2>
             <div className="row">
                 {
