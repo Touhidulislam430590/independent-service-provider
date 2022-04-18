@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import google from '../../../images/google-logo.png';
-import github from '../../../images/github-logo.png';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { auth } from '../../../firebase.init';
 import '../Register/Register.css';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [userInfo, setUserInfo] = useState({
@@ -61,7 +61,7 @@ const Login = () => {
     return (
         <div className='container'>
             <h2 className='mt-4 mb-4'>Login</h2>
-
+            <ToastContainer />
             <Form className="w-50" onSubmit={handleFormSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -83,7 +83,7 @@ const Login = () => {
             <p>New User? <Link to='/register'>Registration Here</Link> </p>
             <p>Forget password? <Button onClick={async () => {
           await sendPasswordResetEmail(userInfo.email);
-          alert('Sent email');
+          toast('Sent email for reset password');
         }}>Reset Password</Button></p>
         </div>
     );

@@ -1,7 +1,7 @@
 # Project Name : Tutorial-Guru
 
 
-Live project link [Create React App](https://github.com/facebook/create-react-app).
+Live firebase project link [https://tutorial-guru.web.app/](https://tutorial-guru.web.app/).
 
 ## Project work list
 * Create Home page and implement there banner, some products and an another section
