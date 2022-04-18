@@ -3,9 +3,10 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../../images/google-logo.png';
 import github from '../../../images/github-logo.png';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { auth } from '../../../firebase.init';
 import '../Register/Register.css';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 
 const Login = () => {
     const [userInfo, setUserInfo] = useState({
@@ -19,8 +20,12 @@ const Login = () => {
     })
     
     const [ signInWithEmailAndPassword, user, loading, hookError ] = useSignInWithEmailAndPassword(auth);
-
-
+    
+    
+    // const [email, setEmail] = useState('');
+    const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(auth);
+    
+    
     const handleFormSubmit = (event) => {
         event.preventDefault();
         signInWithEmailAndPassword(userInfo.email, userInfo.password);
@@ -40,16 +45,17 @@ const Login = () => {
             setErrors({...errors, password:'Password must be at least 8 character'});
         }
     };
-
+    
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || "/home";
 
     useEffect( () => {
         if (user) {
-            navigate(from);
+            navigate(from, {replace: true});
         }
-    }, [user])
+    }, [user]);
+
 
 
     return (
@@ -75,22 +81,10 @@ const Login = () => {
                 { hookError && <p className="text-danger">{hookError?.message}</p> }
             </Form>
             <p>New User? <Link to='/register'>Registration Here</Link> </p>
-
-            <div className="d-flex ">
-                <div className='make-underline'></div>
-                <p className='px-3'>or</p>
-                <div className='make-underline'></div>
-            </div>
-
-            <Button className='btn btn-primary d-block my-3 '>
-                <img src={google} height="24px" alt="" className='me-2' />
-                Sign In with Google
-            </Button>
-
-            <Button className='btn btn-info  d-block '>
-                <img src={github} height="24px" alt="" className='me-2' />
-                Sign In with Github
-            </Button>
+            <p>Forget password? <Button onClick={async () => {
+          await sendPasswordResetEmail(userInfo.email);
+          alert('Sent email');
+        }}>Reset Password</Button></p>
         </div>
     );
 };

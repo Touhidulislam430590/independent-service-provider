@@ -10,21 +10,21 @@ const Footer = () => {
     return (
         <div className="bg-dark mb-0 mt-5">
             <div className="container row" variant="light">
-                <div className="col-6">
+                <div className="col-12 col-lg-6">
                     <h2 className='mt-5 text-white'>TutorialGuru</h2>
                     <p className='text-white'> Level-4, 34, Awal Centre, Banani, Dhaka</p>
                     <p className='text-white'> Official: web@tutorial-guru.com</p>
                     <p className='text-white'>Helpline : 017XXXXXXXX, 018XXXXXXXX , 019XXXXXXXX</p>
                     <p className='text-white'>(Available : Sat - Thu, 10:00 AM to 7:00 PM)</p>
                 </div>
-                <div className="col-3 pt-4">
+                <div className="col-12 col-lg-3 py-4">
                     <ListGroup> 
                         <ListGroup.Item>About</ListGroup.Item>
                         <ListGroup.Item>Blogs</ListGroup.Item>
                         
                     </ListGroup>
                 </div>
-                <div className="col-3 d-flex align-items-center">
+                <div className="col-12 col-lg-3 py-4 d-flex align-items-center">
                     <img src={payment} alt="" height={'150px'} />
                 </div>
             </div>
